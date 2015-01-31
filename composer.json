@@ -1,0 +1,19 @@
+{
+    "name": "tebru/retrofit-bundle",
+    "description": "A Symfony2 bundle for the retrofit-php library.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nate Brunette",
+            "email": "n@tebru.net"
+        }
+    ],
+    "require": {
+        "tebru/retrofit-php": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tebru\\RetrofitBundle\\": ""
+        }
+    }
+}

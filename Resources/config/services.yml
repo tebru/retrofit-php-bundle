@@ -1,0 +1,13 @@
+parameters:
+    tebru_retrofit.rest_adapter.class: Tebru\Retrofit\Adapter\RestAdapter
+
+services:
+    tebru_retrofit.services_collection:
+        class: Tebru\RetrofitBundle\ServicesCollection
+
+    tebru_retrofit.services_warmer:
+        class: Tebru\RetrofitBundle\Cache\ServicesWarmer
+        public: false
+        arguments: [@service_container]
+        tags:
+            - { name: kernel.cache_warmer }
