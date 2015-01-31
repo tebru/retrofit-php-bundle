@@ -15,7 +15,7 @@ Add a line to your AppKernel.php
 new Tebru\RetrofitBundle\TebruRetrofitBundle()
 ```
 
-You will need to create providers for each API you want to consume.  They should be created with the builder and return a RestAdapter.
+You will need to create providers for each API you want to consume.  They should be created with the builder and return a RestAdapter.  Here is an example:
 
 ```
 <?php
@@ -23,16 +23,17 @@ You will need to create providers for each API you want to consume.  They should
 namespace AppBundle;
 
 use Tebru\Retrofit\Adapter\RestAdapter;
-use Tebru\Retrofit\Adapter\RestAdapterProvider;
 
-class FooBarProvider implements RestAdapterProvider
+class FooBarRestAdapterProvider
 {
-    static public function getRestAdapter()
+    static public function get($baseUrl)
     {
         // setup additional dependencies like an http client here and use
         // the setters to add them to the builder
+        
+        // build the rest adapter
         return RestAdapter::builder()
-            ->setBaseUrl('http://foo.bar')
+            ->setBaseUrl($baseUrl)
             ->build();
     }
 }
@@ -67,7 +68,7 @@ services:
     # create a rest adapter
     foobar_rest_adapter:
         class: %tebru_retrofit.rest_adapter.class%
-        factory: [AppBundle\FooBarProvider, getRestAdapter]
+        factory: [AppBundle\FooBarRestAdapterProvider, get]
         
     # use the rest adapter to create clients
     # clients must be tagged with 'tebru_retrofit.register'
