@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "19c819deab817b6532ea4500b220c4df",
+    "hash": "5520dd8bd42d18ed431fd6333360d1b0",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -692,16 +692,16 @@
         },
         {
             "name": "tebru/retrofit-php",
-            "version": "dev-master",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tebru/retrofit-php.git",
-                "reference": "85813ff061213ea3afe2d9c0e10250b204db3e35"
+                "reference": "6f44db64dff939539eb12f3a9636a26d5ed55732"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tebru/retrofit-php/zipball/85813ff061213ea3afe2d9c0e10250b204db3e35",
-                "reference": "85813ff061213ea3afe2d9c0e10250b204db3e35",
+                "url": "https://api.github.com/repos/tebru/retrofit-php/zipball/6f44db64dff939539eb12f3a9636a26d5ed55732",
+                "reference": "6f44db64dff939539eb12f3a9636a26d5ed55732",
                 "shasum": ""
             },
             "require": {
@@ -739,7 +739,7 @@
                 }
             ],
             "description": "Retrofit for PHP - A PHP REST client.",
-            "time": "2015-01-31 06:30:12"
+            "time": "2015-03-11 22:48:04"
         },
         {
             "name": "twig/twig",
@@ -802,9 +802,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "tebru/retrofit-php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
