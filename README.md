@@ -5,7 +5,7 @@ This Symfony2 bundle aims to provide an easy way to use the [tebru/retrofit-php]
 This bundle is still under active development.  Install it from dev-master.
 
 ```
-composer require tebru/retrofit-php-bundle:dev-master
+composer require tebru/retrofit-bundle:dev-master
 ```
 
 ## Usage
