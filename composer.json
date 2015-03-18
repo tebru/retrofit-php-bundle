@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "tebru/retrofit-php": "0.1.1"
+        "tebru/retrofit-php": "0.1.*"
     },
     "autoload": {
         "psr-4": {
