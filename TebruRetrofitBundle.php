@@ -18,13 +18,28 @@ use Tebru\RetrofitBundle\DependencyInjection\Compiler\RegisterCompilerPass;
 class TebruRetrofitBundle extends Bundle
 {
     /**
+     * Track if retrofit has already been loaded
+     *
+     * Running cache:clear will call this boot method twice
+     * and throw errors if we try to require the file twice
+     *
+     * @var bool
+     */
+    private $retrofitLoaded = false;
+
+    /**
      * Load cache file
      */
     public function boot()
     {
+        if (true === $this->retrofitLoaded) {
+            return null;
+        }
+
         $cacheDir = $this->container->getParameter('kernel.cache_dir');
         $retrofit = new Retrofit($cacheDir);
         $retrofit->load();
+        $this->retrofitLoaded = true;
     }
 
     /**
