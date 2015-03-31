@@ -25,21 +25,21 @@ class TebruRetrofitBundle extends Bundle
      *
      * @var bool
      */
-    private $retrofitLoaded = false;
+    private static $retrofitLoaded = false;
 
     /**
      * Load cache file
      */
     public function boot()
     {
-        if (true === $this->retrofitLoaded) {
+        if (true === self::$retrofitLoaded) {
             return null;
         }
 
         $cacheDir = $this->container->getParameter('kernel.cache_dir');
         $retrofit = new Retrofit($cacheDir);
         $retrofit->load();
-        $this->retrofitLoaded = true;
+        self::$retrofitLoaded = true;
     }
 
     /**
