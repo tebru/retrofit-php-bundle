@@ -7,7 +7,7 @@ This bundle is still under active development.
 Please include both packages in your composer.json file so you can update the library separately.
 
 ```
-composer require tebru/retrofit-php:0.1.*
+composer require tebru/retrofit-php:0.2.*
 composer require tebru/retrofit-bundle:0.1.*
 ```
 
