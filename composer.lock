@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9ae2931282424121077b9ceda6617a7e",
+    "hash": "19c819deab817b6532ea4500b220c4df",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -444,6 +444,51 @@
             "time": "2014-03-18 08:39:00"
         },
         {
+            "name": "nikic/php-parser",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "dba7524b3724f25b947cd26a580787c55c8a6f9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dba7524b3724f25b947cd26a580787c55c8a6f9b",
+                "reference": "dba7524b3724f25b947cd26a580787c55c8a6f9b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2015-03-24 19:10:28"
+        },
+        {
             "name": "phpcollection/phpcollection",
             "version": "0.4.0",
             "source": {
@@ -691,26 +736,70 @@
             "time": "2015-01-03 21:13:09"
         },
         {
-            "name": "tebru/retrofit-php",
-            "version": "v0.2.0",
+            "name": "tebru/assert",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tebru/retrofit-php.git",
-                "reference": "9f9bcfa30ba41722d3e10b856b80467a5f0861f7"
+                "url": "https://github.com/tebru/assert.git",
+                "reference": "d4fded60403c4d213667677bd8eb7efa0375f727"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tebru/retrofit-php/zipball/9f9bcfa30ba41722d3e10b856b80467a5f0861f7",
-                "reference": "9f9bcfa30ba41722d3e10b856b80467a5f0861f7",
+                "url": "https://api.github.com/repos/tebru/assert/zipball/d4fded60403c4d213667677bd8eb7efa0375f727",
+                "reference": "d4fded60403c4d213667677bd8eb7efa0375f727",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/assert.php"
+                ],
+                "psr-4": {
+                    "Tebru\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nate Brunette",
+                    "email": "n@tebru.net"
+                }
+            ],
+            "description": "Simple function to assert conditions",
+            "time": "2015-02-01 17:38:27"
+        },
+        {
+            "name": "tebru/retrofit-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tebru/retrofit-php.git",
+                "reference": "0530a0c3a6cf9b5f4e771a50892847791b613caf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tebru/retrofit-php/zipball/0530a0c3a6cf9b5f4e771a50892847791b613caf",
+                "reference": "0530a0c3a6cf9b5f4e771a50892847791b613caf",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "1.2.*",
                 "guzzlehttp/guzzle": "5.2.*",
                 "jms/serializer": "0.16.*",
+                "nikic/php-parser": "1.2.*",
                 "php": ">= 5.4",
                 "symfony/console": "2.6.*",
                 "symfony/filesystem": "2.6.*",
+                "tebru/assert": "0.1.*",
                 "twig/twig": "*"
             },
             "require-dev": {
@@ -739,7 +828,7 @@
                 }
             ],
             "description": "Retrofit for PHP - A PHP REST client.",
-            "time": "2015-03-31 00:46:40"
+            "time": "2015-04-03 02:45:09"
         },
         {
             "name": "twig/twig",
@@ -802,7 +891,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tebru/retrofit-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "tebru/retrofit-php": "0.2.*"
+        "tebru/retrofit-php": "dev-master"
     },
     "autoload": {
         "psr-4": {
