@@ -1,5 +1,5 @@
 parameters:
-    tebru_retrofit.rest_adapter.class: Tebru\Retrofit\Adapter\RestAdapter
+    tebru_retrofit.rest_adapter.class: Tebru\Retrofit\Adapter\Rest\RestAdapter
 
 services:
     tebru_retrofit.services_collection:
