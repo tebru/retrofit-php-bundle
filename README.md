@@ -2,13 +2,9 @@
 This Symfony2 bundle aims to provide an easy way to use the [tebru/retrofit-php](https://github.com/tebru/retrofit-php) library.  Please review the [documentation](https://github.com/tebru/retrofit-php) for functionality.
 
 ## Installation
-This bundle is still under active development.
-
-Please include both packages in your composer.json file so you can update the library separately.
 
 ```
-composer require tebru/retrofit-php:0.2.*
-composer require tebru/retrofit-bundle:0.1.*
+composer require tebru/retrofit-bundle:~1.0
 ```
 
 ## Usage

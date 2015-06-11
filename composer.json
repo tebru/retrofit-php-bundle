@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "tebru/retrofit-php": "0.3.*"
+        "symfony/symfony": "~2.6",
+        "tebru/retrofit-php": "~1.0"
     },
     "autoload": {
         "psr-4": {
