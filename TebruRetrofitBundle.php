@@ -7,7 +7,7 @@ namespace Tebru\RetrofitBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Tebru\Retrofit\Provider\GeneratedClassMetaDataProvider;
+use Tebru\Retrofit\Retrofit;
 use Tebru\RetrofitBundle\DependencyInjection\Compiler\RegisterCompilerPass;
 
 /**
@@ -21,7 +21,7 @@ class TebruRetrofitBundle extends Bundle
     {
         $cacheDir = $this->container->getParameter('kernel.cache_dir');
         $loader = require __DIR__ . '/../../autoload.php';
-        $loader->addPsr4(GeneratedClassMetaDataProvider::NAMESPACE_PREFIX . '\\', $cacheDir . '/retrofit');
+        $loader->addPsr4(Retrofit::NAMESPACE_PREFIX . '\\', $cacheDir . '/retrofit');
     }
 
     /**

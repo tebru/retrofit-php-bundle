@@ -57,7 +57,10 @@ class ServicesWarmer implements CacheWarmerInterface
      */
     public function warmUp($cacheDir)
     {
-        $retrofit = new Retrofit($cacheDir);
+        $retrofit = Retrofit::builder()
+            ->setCacheDir($cacheDir)
+            ->setEventDispatcher($this->container->get('event_dispatcher'))
+            ->build();
 
         /** @var ServicesCollection $servicesCollection */
         $servicesCollection = $this->container->get(RegisterCompilerPass::COLLECTION_ID);

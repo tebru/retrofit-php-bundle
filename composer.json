@@ -9,12 +9,15 @@
         }
     ],
     "require": {
-        "symfony/symfony": "~2.6",
-        "tebru/retrofit-php": "~1.0"
+        "symfony/symfony": "~2.3",
+        "tebru/retrofit-php": "^2.0"
     },
     "autoload": {
         "psr-4": {
             "Tebru\\RetrofitBundle\\": ""
         }
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "Required to make requests"
     }
 }

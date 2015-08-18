@@ -3,16 +3,19 @@ This Symfony2 bundle aims to provide an easy way to use the [tebru/retrofit-php]
 
 ## Installation
 
-```
-composer require tebru/retrofit-bundle:~1.0
-```
+    composer require tebru/retrofit-bundle
 
-## Usage
+As retrofit does not include an http client, install guzzle.
+
+    composer require guzzlehttp/guzzle
+
 Add a line to your AppKernel.php
 
 ```
 new Tebru\RetrofitBundle\TebruRetrofitBundle()
 ```
+
+## Usage
 
 You will need to create providers for each API you want to consume.  They should be created with the builder and return a RestAdapter.  Here is an example:
 
