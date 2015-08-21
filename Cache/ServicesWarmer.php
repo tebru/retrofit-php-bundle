@@ -6,6 +6,7 @@
 namespace Tebru\RetrofitBundle\Cache;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface;
 use Tebru\Retrofit\Retrofit;
 use Tebru\RetrofitBundle\DependencyInjection\Compiler\RegisterCompilerPass;
@@ -59,7 +60,7 @@ class ServicesWarmer implements CacheWarmerInterface
     {
         $retrofit = Retrofit::builder()
             ->setCacheDir($cacheDir)
-            ->setEventDispatcher($this->container->get('event_dispatcher'))
+            ->setEventDispatcher(new EventDispatcher())
             ->build();
 
         /** @var ServicesCollection $servicesCollection */
