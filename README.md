@@ -3,15 +3,19 @@ This Symfony2 bundle aims to provide an easy way to use the [tebru/retrofit-php]
 
 ## Installation
 
-    composer require tebru/retrofit-bundle
+```sh
+composer require tebru/retrofit-bundle
+```
 
-As retrofit does not include an http client, install guzzle.
+As Retrofit does not include an http client, install Guzzle.
 
-    composer require guzzlehttp/guzzle
+```sh
+composer require guzzlehttp/guzzle
+```
 
 Add a line to your AppKernel.php
 
-```
+```php
 new Tebru\RetrofitBundle\TebruRetrofitBundle()
 ```
 
@@ -19,7 +23,7 @@ new Tebru\RetrofitBundle\TebruRetrofitBundle()
 
 You will need to create providers for each API you want to consume.  They should be created with the builder and return a RestAdapter.  Here is an example:
 
-```
+```php
 <?php
 
 namespace AppBundle;
@@ -41,9 +45,9 @@ class FooBarRestAdapterProvider
 }
 ```
 
-Create annotated interfaces.  A simple example is shown below, more detailed examples are available [here](https://github.com/tebru/retrofit-php)
+Create annotated interfaces.  A simple example is shown below, more detailed examples are available [here](https://github.com/tebru/retrofit-php).
 
-```
+```php
 <?php
 
 namespace AppBundle;
@@ -61,7 +65,7 @@ interface Foo
 
 Everything else can be configured in your service definition.  A yaml example is shown.
 
-```
+```yaml
 parameters:
     foo.class: AppBundle\Foo
     bar.class: AppBundle\Bar
@@ -95,9 +99,9 @@ services:
 ```
 
 ### Mocking
-Because retrofit uses interfaces, it's easy to create mock implementations if you do not want to hit a real API.
+Because Retrofit uses interfaces, it's easy to create mock implementations if you do not want to hit a real API.
 
-```
+```yaml
 services:
     foo_service:
         class: %foo.class%
@@ -107,7 +111,7 @@ services:
             - { name: tebru_retrofit.register }
 ```
 
-```
+```yaml
 services:
     foo_service:
         class: %foo.class%
