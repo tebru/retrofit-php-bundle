@@ -28,7 +28,7 @@ You will need to create providers for each API you want to consume.  They should
 
 namespace AppBundle;
 
-use Tebru\Retrofit\Adapter\RestAdapter;
+use Tebru\Retrofit\Adapter\Rest\RestAdapter;
 
 class FooBarRestAdapterProvider
 {
