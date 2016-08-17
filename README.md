@@ -80,14 +80,14 @@ services:
     # clients must be tagged with 'tebru_retrofit.register'
     foo_service:
         class: %foo.class%
-        factory: [@rest_adapter, create]
+        factory: [@foobar_rest_adapter, create]
         arguments: [%foo.class%]
         tags:
             - { name: tebru_retrofit.register }
             
     bar_service:
         class: %bar.class%
-        factory: [@rest_adapter, create]
+        factory: [@foobar_rest_adapter, create]
         arguments: [%bar.class%]
         tags:
             - { name: tebru_retrofit.register }
@@ -105,7 +105,7 @@ Because Retrofit uses interfaces, it's easy to create mock implementations if yo
 services:
     foo_service:
         class: %foo.class%
-        factory: [@rest_adapter, create]
+        factory: [@foobar_rest_adapter, create]
         arguments: ['AppBundle\MockFoo']
         tags:
             - { name: tebru_retrofit.register }
@@ -115,7 +115,7 @@ services:
 services:
     foo_service:
         class: %foo.class%
-        factory: [@rest_adapter, create]
+        factory: [@foobar_rest_adapter, create]
         arguments: [@mock_foo]
         tags:
             - { name: tebru_retrofit.register }
