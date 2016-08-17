@@ -75,6 +75,8 @@ services:
     foobar_rest_adapter:
         class: %tebru_retrofit.rest_adapter.class%
         factory: [AppBundle\FooBarRestAdapterProvider, get]
+        arguments:
+             - "https://foobar.com"
         
     # use the rest adapter to create clients
     # clients must be tagged with 'tebru_retrofit.register'
