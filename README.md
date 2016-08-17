@@ -32,7 +32,7 @@ use Tebru\Retrofit\Adapter\Rest\RestAdapter;
 
 class FooBarRestAdapterProvider
 {
-    static public function get($baseUrl)
+    public static function get($baseUrl)
     {
         // setup additional dependencies like an http client here and use
         // the setters to add them to the builder
